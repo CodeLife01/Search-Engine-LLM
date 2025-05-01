@@ -17,7 +17,7 @@ jobs:
       - name: Pull changes from remote
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git pull https://DevGwarzo:$HF_TOKEN@huggingface.co/spaces/DevGwarzo/search-engine-llm main
+        run: git pull --rebase https://DevGwarzo:$HF_TOKEN@huggingface.co/spaces/DevGwarzo/search-engine-llm main
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
